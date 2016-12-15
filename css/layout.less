@@ -1,0 +1,55 @@
+@defaultBgColor: rgba(100, 100, 100, .1);
+
+@headerBgColor: #c0c0c0;
+@contentBgColor: @defaultBgColor;
+@footerBgColor: #a7a7a7;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  background-color: @defaultBgColor;
+  .panel-subscriber-container,
+  .box-header,
+  .box-content,
+  .box-footer {
+    padding: 10px;
+    border: 5px solid rgba(100, 100, 100, .08);
+  }
+  .box-header {
+    background-color: @headerBgColor;
+  }
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    overflow: auto;
+    min-height: 100px;
+    padding-right:0;
+    border-right: 0;
+    background-color: @contentBgColor;
+
+
+  }
+  .box-footer {
+    background-color: @footerBgColor;
+  }
+}

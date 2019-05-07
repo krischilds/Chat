@@ -19,9 +19,9 @@ define([
     var usernameSet = false;
 
     var appModel = new LayoutModel();
-    appModel.set("title", "Signing App");
-    appModel.set("welcome", "Documents Panel...");
-    appModel.set("footerText", "&copy; Copyright 2016");
+    appModel.set("title", "Chat Demo");
+    appModel.set("welcome", "...");
+    appModel.set("footerText", "Footer");
 
     var View = Backbone.View.extend({
         className: "box-container",

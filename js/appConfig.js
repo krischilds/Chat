@@ -1,4 +1,6 @@
 define(function (require) {
+
+    // TODO: make channel dynamic based on a "room" param
     var appConfig = {
 
     	pubnub: {

@@ -64,8 +64,6 @@ define(function (require) {
                     if (statusEvent.category === "PNConnectedCategory") {
 
                     }
-
-
                 },
                 message: function(m) {
                     console.log(m);

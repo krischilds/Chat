@@ -75,23 +75,3 @@ define([
 
     return View;
 });
-
-/*
-1. listen for changes in DOM
- events: {
- 'change input.form-control': 'updateModel'
-}
-
- 2. On DOM change, update the model
- updateModel: function(e) {
-    this.model.set("fieldVal", e.target.value);
- }
-
- template: $("#fieldTemplate").html(),
- initialize: function(options) {
- // todo: on model change render
- this.model = options.model;
-
- 3. Listen to the model.  On model change update the DOM
- this.listenTo(this.model, 'change', this.render);
- */

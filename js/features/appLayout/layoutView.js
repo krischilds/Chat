@@ -14,8 +14,6 @@ define([
 ], function ($, Backbone, Handlebars, eventAggregator, LayoutModel, layoutTmpl, ChatView, HistoryView, appConfig) {
 
     "use strict";
-    var console = window.console || {};
-
     var usernameSet = false;
 
     var appModel = new LayoutModel();
@@ -31,8 +29,6 @@ define([
             "change input.username": "updateModel"
         },
         initialize: function (options) {
-            console.log(options);
-
             var ProfileModel = Backbone.Model.extend({
                 defaults: {
                     username: "Anonymous"
@@ -57,10 +53,10 @@ define([
                 var chatView = new ChatView(chatOptions);
                 $content.append(chatView.render().el);
 
-                /*
+
                 var historyView = new HistoryView();
                 $content.append(historyView.render().el);
-                */
+
 
             } else {
 

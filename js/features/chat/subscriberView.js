@@ -33,11 +33,11 @@ define([
             chatInterface.subscribe();
             eventAggregator.on("add-message", function (e) {
 
-                var msg = "<li class='msg'>" + e.message + "</li>";
-                that.$el.find(".panel-subscriber-messages").append(msg);
+                var msg = "<li class='text'>" + e.message + "</li>";
+                that.$el.find(".messages").append(msg);
 
-                var username = "<li class='msg-info'>" + e.username + "</li>";
-                that.$el.find(".panel-subscriber-messages").append(username);
+                var username = "<li class='text-info'>" + e.username + "</li>";
+                that.$el.find(".messages").append(username);
 
             });
 

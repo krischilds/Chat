@@ -24,7 +24,7 @@ define(function (require) {
         });
 
         var myState = {};
-        myState.username = "Kristopher";
+        myState.username = "Anonymous";
         myState.location = "Seattle, WA";
 
         pubnub.setState(
@@ -67,7 +67,6 @@ define(function (require) {
                 },
                 message: function(m) {
                     console.log(m);
-
                     eventAggregator.trigger("add-message", { message: m.message.text, username: m.message.username });
                 },
                 presence: function(event) {
@@ -77,6 +76,7 @@ define(function (require) {
                     var data = event.state;
                     var occupancy = event.occupancy;
 
+                    /*
                     console.log("");
                     console.log("*** presence event ***");
                     console.log("action:    " + action);
@@ -86,6 +86,7 @@ define(function (require) {
                     console.log("data:      " + JSON.stringify(data));
                     console.log("*** presence event ***");
                     console.log("");
+                    */
 
                     if (action === "join") {
                         window.alert("JOIN");
